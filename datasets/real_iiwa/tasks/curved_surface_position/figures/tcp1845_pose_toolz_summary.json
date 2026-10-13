@@ -1,0 +1,40 @@
+{
+  "input": "datasets/real_iiwa/tasks/curved_surface_position/processed/train_sets/tcp1845_pose_samples_v001.npz",
+  "world_output": "datasets/real_iiwa/tasks/curved_surface_position/processed/train_sets/tcp1845_pose_toolz_samples_v001.npz",
+  "normalized_output": "datasets/real_iiwa/tasks/curved_surface_position/processed/train_sets/tcp1845_pose_toolz_samples_normalized_v001.npz",
+  "representation": "[x, y, z, tool_z_x, tool_z_y, tool_z_z]",
+  "normalized_representation": "[u_norm, v_norm, z_norm, tool_z_x, tool_z_y, tool_z_z]",
+  "orientation_source": "Demo orientation uses the recorded/reconstructed tool local z-axis from the pose sample file.",
+  "target_tool_z": "-upward neural surface normal",
+  "position_abs_surface_distance_mm": {
+    "mean": 0.8501645148936862,
+    "median": 0.6120974791007809,
+    "p95": 2.4046024875445298,
+    "max": 13.356220958380295
+  },
+  "position_signed_surface_distance_mm": {
+    "mean": -0.022689153680685664,
+    "median": 0.023910152931556336,
+    "p95": 1.7405373299152287,
+    "max": 13.356220958380295
+  },
+  "recorded_tool_z_vs_target_tool_z_deg": {
+    "mean": 33.580573910518176,
+    "median": 34.01741264647694,
+    "p95": 61.150878253137634,
+    "max": 83.09121200143821
+  },
+  "recorded_tool_z_norm": {
+    "mean": 1.0,
+    "median": 1.0,
+    "p95": 1.0,
+    "max": 1.0000000000000002
+  },
+  "target_tool_z_norm": {
+    "mean": 1.0,
+    "median": 1.0,
+    "p95": 1.0,
+    "max": 1.0000000000000002
+  },
+  "point_count": 13538
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "name": "linked_style_seed0",
+    "method": "dataaug",
+    "dataset": "3d_vz_2d_ellipse_traj",
+    "seed": 0,
+    "overrides": ["n_train=512", "traj_gene_n_grid=4096", "traj_count=16", "traj_knn=24", "sigmas=[0.2]", "lam_off=3.0"]
+  },
+  {
+    "name": "linked_style_seed1",
+    "method": "dataaug",
+    "dataset": "3d_vz_2d_ellipse_traj",
+    "seed": 1,
+    "overrides": ["n_train=512", "traj_gene_n_grid=4096", "traj_count=16", "traj_knn=24", "sigmas=[0.2]", "lam_off=3.0"]
+  },
+  {
+    "name": "linked_style_seed3",
+    "method": "dataaug",
+    "dataset": "3d_vz_2d_ellipse_traj",
+    "seed": 3,
+    "overrides": ["n_train=512", "traj_gene_n_grid=4096", "traj_count=16", "traj_knn=24", "sigmas=[0.2]", "lam_off=3.0"]
+  },
+  {
+    "name": "linked_style_seed9",
+    "method": "dataaug",
+    "dataset": "3d_vz_2d_ellipse_traj",
+    "seed": 9,
+    "overrides": ["n_train=512", "traj_gene_n_grid=4096", "traj_count=16", "traj_knn=24", "sigmas=[0.2]", "lam_off=3.0"]
+  }
+]

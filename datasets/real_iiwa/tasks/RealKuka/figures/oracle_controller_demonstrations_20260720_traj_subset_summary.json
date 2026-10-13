@@ -1,0 +1,100 @@
+{
+  "subsets": [
+    {
+      "input": "datasets/real_iiwa/tasks/RealKuka/processed/train_sets/oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_v001.npz",
+      "output": "datasets/real_iiwa/tasks/RealKuka/processed/train_sets/oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_traj4_v001.npz",
+      "source_trajectory_count": 56,
+      "selected_trajectory_count": 4,
+      "selected_trajectory_ids": [
+        0,
+        18,
+        37,
+        55
+      ],
+      "source_points": 2971,
+      "output_points": 174
+    },
+    {
+      "input": "datasets/real_iiwa/tasks/RealKuka/processed/train_sets/oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_v001.npz",
+      "output": "datasets/real_iiwa/tasks/RealKuka/processed/train_sets/oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_traj8_v001.npz",
+      "source_trajectory_count": 56,
+      "selected_trajectory_count": 8,
+      "selected_trajectory_ids": [
+        0,
+        8,
+        16,
+        24,
+        31,
+        39,
+        47,
+        55
+      ],
+      "source_points": 2971,
+      "output_points": 339
+    },
+    {
+      "input": "datasets/real_iiwa/tasks/RealKuka/processed/train_sets/oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_v001.npz",
+      "output": "datasets/real_iiwa/tasks/RealKuka/processed/train_sets/oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_traj16_v001.npz",
+      "source_trajectory_count": 56,
+      "selected_trajectory_count": 16,
+      "selected_trajectory_ids": [
+        0,
+        4,
+        7,
+        11,
+        15,
+        18,
+        22,
+        26,
+        29,
+        33,
+        37,
+        40,
+        44,
+        48,
+        51,
+        55
+      ],
+      "source_points": 2971,
+      "output_points": 801
+    },
+    {
+      "input": "datasets/real_iiwa/tasks/RealKuka/processed/train_sets/oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_v001.npz",
+      "output": "datasets/real_iiwa/tasks/RealKuka/processed/train_sets/oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_traj28_v001.npz",
+      "source_trajectory_count": 56,
+      "selected_trajectory_count": 28,
+      "selected_trajectory_ids": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55
+      ],
+      "source_points": 2971,
+      "output_points": 1458
+    }
+  ]
+}

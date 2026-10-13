@@ -1,0 +1,16 @@
+[
+  {
+    "name": "sigma0.7_lam3_seed0",
+    "method": "dataaug",
+    "dataset": "3d_vz_2d_ellipse_traj",
+    "seed": 0,
+    "overrides": ["sigmas=[0.7]", "lam_off=3.0"]
+  },
+  {
+    "name": "sigma0.7_lam3_seed1",
+    "method": "dataaug",
+    "dataset": "3d_vz_2d_ellipse_traj",
+    "seed": 1,
+    "overrides": ["sigmas=[0.7]", "lam_off=3.0"]
+  }
+]

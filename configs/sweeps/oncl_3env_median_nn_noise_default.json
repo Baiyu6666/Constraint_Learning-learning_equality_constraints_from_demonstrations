@@ -1,0 +1,26 @@
+{
+  "name": "oncl_3env_median_nn_noise_default",
+  "description": "Default ONCL noise-level sweep for 12d_dual_arm_traj, 3d_vz_2d_ellipse_traj, and 6d_surf_normal_traj. Gaussian training noise is scaled by the clean training set median nearest-neighbor L2 distance: target_rms_l2 = alpha * median_nn_l2, per_dim_sigma = target_rms_l2 / sqrt(data_dim).",
+  "method": "oncl",
+  "datasets": [
+    "12d_dual_arm_traj",
+    "3d_vz_2d_ellipse_traj",
+    "6d_surf_normal_traj"
+  ],
+  "seeds": [0, 1, 2, 3, 4, 5, 6],
+  "noise": {
+    "enabled_key": "train_noise_enable",
+    "mode_key": "train_noise_mode",
+    "alpha_key": "train_noise_median_nn_alpha",
+    "mode": "median_nn_l2_gaussian",
+    "alphas": [0.0, 0.1, 0.25, 0.5, 1.0, 2.0],
+    "formula": "median_nn_l2 = median_i min_{j != i} ||x_i - x_j||_2; per_dim_sigma = alpha * median_nn_l2 / sqrt(data_dim); x_noisy = x_clean + Normal(0, per_dim_sigma^2 I)",
+    "angle_postprocess": "wrap RPY dimensions to [-pi, pi] after adding noise",
+    "metric_space": "raw training state space"
+  },
+  "primary_metric": "proj_manifold_dist",
+  "eval_policy": "Evaluation remains clean; noise is applied only to training demonstrations.",
+  "planned_jobs": 126,
+  "local_outdir": "outputs/bench/oncl_3env_median_nn_noise_7seed",
+  "run_parallel_template": "conda run -n segment python -m runners.run_parallel --methods oncl --datasets 12d_dual_arm_traj,3d_vz_2d_ellipse_traj,6d_surf_normal_traj --seeds 0,1,2,3,4,5,6 --sweep train_noise_median_nn_alpha=0.0,0.1,0.25,0.5,1.0,2.0 --override train_noise_enable=true --override train_noise_mode=median_nn_l2_gaussian --outdir outputs/bench/oncl_3env_median_nn_noise_7seed --workers 4 --resume"
+}

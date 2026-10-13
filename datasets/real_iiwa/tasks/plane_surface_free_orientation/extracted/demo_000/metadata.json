@@ -1,0 +1,185 @@
+{
+  "source_bag": "datasets/real_iiwa/tasks/plane_surface_free_orientation/raw_bags/demo_000__2026-07-16-07-27-28.bag",
+  "format": "npz",
+  "robot": "kuka_iiwa",
+  "topics": {
+    "pose": "/iiwa/ee_info/Pose",
+    "ee_vel": "/iiwa/ee_info/Vel",
+    "joint_states": "/iiwa/joint_states",
+    "torque_command": "/iiwa/TorqueController/command",
+    "command_status": "/iiwa/commanding_status",
+    "measure": "/iiwa/measure",
+    "plotvar": "/iiwa/plotvar",
+    "tf": "/tf",
+    "tf_static": "/tf_static"
+  },
+  "tcp": {
+    "frame": "iiwa_link_ee",
+    "offset_xyz_m": [
+      0.0,
+      0.0,
+      0.111
+    ],
+    "orientation": "same_as_iiwa_link_ee",
+    "velocity_assumption": "ee twist linear/angular components are expressed in the world/base frame; tcp_linear_vel = ee_linear_vel + cross(ee_angular_vel, R_ee * offset_xyz_m)."
+  },
+  "skipped_topics": {
+    "additional_outputs": "Skipped because it uses the custom iiwa_driver/AdditionalOutputs message."
+  },
+  "tf_chain": [
+    [
+      "world",
+      "iiwa_link_0"
+    ],
+    [
+      "iiwa_link_0",
+      "iiwa_link_1"
+    ],
+    [
+      "iiwa_link_1",
+      "iiwa_link_2"
+    ],
+    [
+      "iiwa_link_2",
+      "iiwa_link_3"
+    ],
+    [
+      "iiwa_link_3",
+      "iiwa_link_4"
+    ],
+    [
+      "iiwa_link_4",
+      "iiwa_link_5"
+    ],
+    [
+      "iiwa_link_5",
+      "iiwa_link_6"
+    ],
+    [
+      "iiwa_link_6",
+      "iiwa_link_7"
+    ],
+    [
+      "iiwa_link_7",
+      "iiwa_link_ee"
+    ]
+  ],
+  "arrays": {
+    "command_status": [
+      4951
+    ],
+    "dq": [
+      4943,
+      7
+    ],
+    "ee_angular_vel": [
+      24654,
+      3
+    ],
+    "ee_linear_vel": [
+      24654,
+      3
+    ],
+    "ee_pos": [
+      24654,
+      3
+    ],
+    "ee_quat": [
+      24654,
+      4
+    ],
+    "effort": [
+      4943,
+      7
+    ],
+    "joint_names": [
+      7
+    ],
+    "measure_angular": [
+      24654,
+      3
+    ],
+    "measure_linear": [
+      24654,
+      3
+    ],
+    "plotvar": [
+      24652,
+      3
+    ],
+    "q": [
+      4943,
+      7
+    ],
+    "t_command_status": [
+      4951
+    ],
+    "t_ee_vel": [
+      24654
+    ],
+    "t_joint": [
+      4943
+    ],
+    "t_measure": [
+      24654
+    ],
+    "t_plotvar": [
+      24652
+    ],
+    "t_pose": [
+      24654
+    ],
+    "t_tf_pose": [
+      1084
+    ],
+    "t_torque_command": [
+      24655
+    ],
+    "tcp_angular_vel": [
+      24654,
+      3
+    ],
+    "tcp_linear_vel": [
+      24654,
+      3
+    ],
+    "tcp_offset_ee": [
+      3
+    ],
+    "tcp_pos": [
+      24654,
+      3
+    ],
+    "tcp_quat": [
+      24654,
+      4
+    ],
+    "tf_ee_pos": [
+      1084,
+      3
+    ],
+    "tf_ee_quat": [
+      1084,
+      4
+    ],
+    "tf_tcp_pos": [
+      1084,
+      3
+    ],
+    "tf_tcp_quat": [
+      1084,
+      4
+    ],
+    "torque_command": [
+      24655,
+      7
+    ]
+  },
+  "files": [
+    {
+      "name": "dataset",
+      "path": "datasets/real_iiwa/tasks/plane_surface_free_orientation/extracted/demo_000/iiwa_demonstration.npz",
+      "rows": 4943
+    }
+  ]
+}

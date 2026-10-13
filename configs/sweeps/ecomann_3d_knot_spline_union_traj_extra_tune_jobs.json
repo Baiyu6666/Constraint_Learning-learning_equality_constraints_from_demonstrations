@@ -1,0 +1,83 @@
+[
+  {
+    "name": "ecomann_traj_local075",
+    "method": "ecomann",
+    "dataset": "linked_curves_3d",
+    "seed": 2116,
+    "override": {
+      "epochs": 80,
+      "lr": 0.001,
+      "n_normal_space_traversal": 3,
+      "n_local_neighborhood_mult": 0.75,
+      "train_log_every": 20
+    }
+  },
+  {
+    "name": "ecomann_traj_local125",
+    "method": "ecomann",
+    "dataset": "linked_curves_3d",
+    "seed": 2116,
+    "override": {
+      "epochs": 80,
+      "lr": 0.001,
+      "n_normal_space_traversal": 3,
+      "n_local_neighborhood_mult": 1.25,
+      "train_log_every": 20
+    }
+  },
+  {
+    "name": "ecomann_traj_local150",
+    "method": "ecomann",
+    "dataset": "linked_curves_3d",
+    "seed": 2116,
+    "override": {
+      "epochs": 80,
+      "lr": 0.001,
+      "n_normal_space_traversal": 3,
+      "n_local_neighborhood_mult": 1.5,
+      "train_log_every": 20
+    }
+  },
+  {
+    "name": "ecomann_traj_eps075",
+    "method": "ecomann",
+    "dataset": "linked_curves_3d",
+    "seed": 2116,
+    "override": {
+      "epochs": 80,
+      "lr": 0.001,
+      "n_normal_space_traversal": 3,
+      "n_local_neighborhood_mult": 1.0,
+      "aug_epsilon_mult_override": 0.75,
+      "train_log_every": 20
+    }
+  },
+  {
+    "name": "ecomann_traj_eps125",
+    "method": "ecomann",
+    "dataset": "linked_curves_3d",
+    "seed": 2116,
+    "override": {
+      "epochs": 80,
+      "lr": 0.001,
+      "n_normal_space_traversal": 3,
+      "n_local_neighborhood_mult": 1.0,
+      "aug_epsilon_mult_override": 1.25,
+      "train_log_every": 20
+    }
+  },
+  {
+    "name": "ecomann_traj_noalign_trav3",
+    "method": "ecomann",
+    "dataset": "linked_curves_3d",
+    "seed": 2116,
+    "override": {
+      "epochs": 80,
+      "lr": 0.001,
+      "n_normal_space_traversal": 3,
+      "n_local_neighborhood_mult": 1.0,
+      "is_aligning_lpca_normal_space_eigvecs": false,
+      "train_log_every": 20
+    }
+  }
+]

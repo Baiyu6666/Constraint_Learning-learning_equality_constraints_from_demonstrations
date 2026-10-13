@@ -1,0 +1,100 @@
+[
+  {
+    "name": "baseline_sigma0.2_lam3_seed0",
+    "method": "dataaug",
+    "dataset": "3d_vz_2d_ellipse_traj",
+    "seed": 0,
+    "overrides": []
+  },
+  {
+    "name": "baseline_sigma0.2_lam3_seed1",
+    "method": "dataaug",
+    "dataset": "3d_vz_2d_ellipse_traj",
+    "seed": 1,
+    "overrides": []
+  },
+  {
+    "name": "sigma0.2_lam1_seed0",
+    "method": "dataaug",
+    "dataset": "3d_vz_2d_ellipse_traj",
+    "seed": 0,
+    "overrides": ["lam_off=1.0"]
+  },
+  {
+    "name": "sigma0.2_lam1_seed1",
+    "method": "dataaug",
+    "dataset": "3d_vz_2d_ellipse_traj",
+    "seed": 1,
+    "overrides": ["lam_off=1.0"]
+  },
+  {
+    "name": "sigma0.2_lam0.5_seed0",
+    "method": "dataaug",
+    "dataset": "3d_vz_2d_ellipse_traj",
+    "seed": 0,
+    "overrides": ["lam_off=0.5"]
+  },
+  {
+    "name": "sigma0.2_lam0.5_seed1",
+    "method": "dataaug",
+    "dataset": "3d_vz_2d_ellipse_traj",
+    "seed": 1,
+    "overrides": ["lam_off=0.5"]
+  },
+  {
+    "name": "sigma0.4_lam1_seed0",
+    "method": "dataaug",
+    "dataset": "3d_vz_2d_ellipse_traj",
+    "seed": 0,
+    "overrides": ["sigmas=[0.4]", "lam_off=1.0"]
+  },
+  {
+    "name": "sigma0.4_lam1_seed1",
+    "method": "dataaug",
+    "dataset": "3d_vz_2d_ellipse_traj",
+    "seed": 1,
+    "overrides": ["sigmas=[0.4]", "lam_off=1.0"]
+  },
+  {
+    "name": "sigma0.4_lam0.5_seed0",
+    "method": "dataaug",
+    "dataset": "3d_vz_2d_ellipse_traj",
+    "seed": 0,
+    "overrides": ["sigmas=[0.4]", "lam_off=0.5"]
+  },
+  {
+    "name": "sigma0.4_lam0.5_seed1",
+    "method": "dataaug",
+    "dataset": "3d_vz_2d_ellipse_traj",
+    "seed": 1,
+    "overrides": ["sigmas=[0.4]", "lam_off=0.5"]
+  },
+  {
+    "name": "sigma0.7_lam1_seed0",
+    "method": "dataaug",
+    "dataset": "3d_vz_2d_ellipse_traj",
+    "seed": 0,
+    "overrides": ["sigmas=[0.7]", "lam_off=1.0"]
+  },
+  {
+    "name": "sigma0.7_lam1_seed1",
+    "method": "dataaug",
+    "dataset": "3d_vz_2d_ellipse_traj",
+    "seed": 1,
+    "overrides": ["sigmas=[0.7]", "lam_off=1.0"]
+  },
+  {
+    "name": "sigma0.7_lam0.5_seed0",
+    "method": "dataaug",
+    "dataset": "3d_vz_2d_ellipse_traj",
+    "seed": 0,
+    "overrides": ["sigmas=[0.7]", "lam_off=0.5"]
+  },
+  {
+    "name": "sigma0.7_lam0.5_seed1",
+    "method": "dataaug",
+    "dataset": "3d_vz_2d_ellipse_traj",
+    "seed": 1,
+    "overrides": ["sigmas=[0.7]", "lam_off=0.5"]
+  }
+]

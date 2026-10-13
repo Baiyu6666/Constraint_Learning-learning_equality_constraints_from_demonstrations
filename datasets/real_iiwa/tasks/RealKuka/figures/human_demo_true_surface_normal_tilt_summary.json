@@ -1,0 +1,19 @@
+{
+  "definition": "tilt angle between the 1D true surface upward normal and world +Z",
+  "demo_npz": "/home/baiyu/PycharmProjects/LearnEqConstraints/datasets/real_iiwa/tasks/RealKuka/processed/train_sets/human_demo_paper_toolz_arc3mm_cropped_v001.npz",
+  "surface_model": "/home/baiyu/PycharmProjects/LearnEqConstraints/datasets/real_iiwa/surface_models/calibrated_tcp1845_neural_1d_surface_model/calibrated_tcp1845_neural_1d_surface_mlp.pt",
+  "sample_count": 1283,
+  "tilt_deg": {
+    "mean": 9.463486671447754,
+    "std": 5.438498020172119,
+    "median": 9.225387573242188,
+    "min": 0.04591742157936096,
+    "max": 17.928396224975586,
+    "p05": 0.4134640097618103,
+    "p95": 17.585309982299805
+  },
+  "stored_npz_normal_check_delta_deg": {
+    "mean": 0.005883335135877132,
+    "max": 0.02797645330429077
+  }
+}

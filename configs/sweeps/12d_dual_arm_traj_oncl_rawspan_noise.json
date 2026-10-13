@@ -1,0 +1,22 @@
+{
+  "name": "12d_dual_arm_traj_oncl_rawspan_noise",
+  "description": "ONCL robustness sweep for 12d_dual_arm_traj with Gaussian noise added to training demonstrations. Noise std for each dimension j is train_noise_raw_span_ratio * raw_span_j, where raw_span_j is computed from the clean training demonstrations. Dimensions with near-zero span receive near-zero noise.",
+  "method": "oncl",
+  "dataset": "12d_dual_arm_traj",
+  "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+  "noise": {
+    "enabled_key": "train_noise_enable",
+    "mode_key": "train_noise_mode",
+    "ratio_key": "train_noise_raw_span_ratio",
+    "mode": "raw_span_gaussian",
+    "ratios": [0.0, 0.01, 0.02, 0.05, 0.1],
+    "formula": "x_noisy[:, j] = x_clean[:, j] + Normal(0, (ratio * (max_j - min_j))^2)",
+    "angle_postprocess": "wrap RPY dimensions to [-pi, pi] after adding noise",
+    "zero_span_policy": "do not special-case zero-span dimensions; zero raw span implies zero noise"
+  },
+  "primary_metric": "proj_manifold_dist",
+  "eval_policy": "Evaluation remains clean; noise is applied only to training demonstrations.",
+  "planned_jobs": 75,
+  "remote_outdir": "/runs/bench/12d_dual_arm_traj_oncl_rawspan_noise_15seed",
+  "run_parallel_template": "python -m runners.run_parallel --methods oncl --datasets 12d_dual_arm_traj --seeds 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14 --sweep train_noise_raw_span_ratio=0.0,0.01,0.02,0.05,0.1 --override train_noise_enable=true --override train_noise_mode=raw_span_gaussian --outdir /runs/bench/12d_dual_arm_traj_oncl_rawspan_noise_15seed --workers 6 --resume"
+}

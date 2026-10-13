@@ -1,0 +1,55 @@
+[
+  {
+    "name": "ecomann_4d_extra_fast_v1_align_norm2",
+    "method": "ecomann",
+    "dataset": "multi_handle_4d",
+    "seed": 2116,
+    "override": {
+      "n_train": 2752,
+      "traj_count": 64,
+      "epochs": 80,
+      "lr": 0.001,
+      "n_normal_space_traversal": 2,
+      "n_local_neighborhood_mult": 1.0,
+      "train_log_every": 20,
+      "projector.max_iter": 250,
+      "projector.tol": 0.00005
+    }
+  },
+  {
+    "name": "ecomann_4d_extra_fast_v2_noalign_norm2",
+    "method": "ecomann",
+    "dataset": "multi_handle_4d",
+    "seed": 2116,
+    "override": {
+      "n_train": 2752,
+      "traj_count": 64,
+      "epochs": 80,
+      "lr": 0.001,
+      "n_normal_space_traversal": 2,
+      "is_aligning_lpca_normal_space_eigvecs": false,
+      "n_local_neighborhood_mult": 1.0,
+      "train_log_every": 20,
+      "projector.max_iter": 250,
+      "projector.tol": 0.00005
+    }
+  },
+  {
+    "name": "ecomann_4d_extra_fast_v3_noalign_lr3e-3",
+    "method": "ecomann",
+    "dataset": "multi_handle_4d",
+    "seed": 2116,
+    "override": {
+      "n_train": 2752,
+      "traj_count": 64,
+      "epochs": 80,
+      "lr": 0.003,
+      "n_normal_space_traversal": 2,
+      "is_aligning_lpca_normal_space_eigvecs": false,
+      "n_local_neighborhood_mult": 1.0,
+      "train_log_every": 20,
+      "projector.max_iter": 250,
+      "projector.tol": 0.00005
+    }
+  }
+]

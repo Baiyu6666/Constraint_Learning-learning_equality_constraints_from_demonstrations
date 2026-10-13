@@ -1,0 +1,53 @@
+[
+  {
+    "name": "dataaug_4d_extra_v1_sigma04_lam1",
+    "method": "dataaug",
+    "dataset": "multi_handle_4d",
+    "seed": 721,
+    "override": {
+      "n_train": 2752,
+      "traj_count": 64,
+      "epochs": 1000,
+      "lr": 0.0003,
+      "sigmas": [0.4],
+      "lam_off": 1.0,
+      "train_log_every": 100,
+      "projector.steps": 120,
+      "projector.min_steps": 60
+    }
+  },
+  {
+    "name": "dataaug_4d_extra_v2_sigma07_lam05",
+    "method": "dataaug",
+    "dataset": "multi_handle_4d",
+    "seed": 721,
+    "override": {
+      "n_train": 2752,
+      "traj_count": 64,
+      "epochs": 1000,
+      "lr": 0.0003,
+      "sigmas": [0.7],
+      "lam_off": 0.5,
+      "train_log_every": 100,
+      "projector.steps": 120,
+      "projector.min_steps": 60
+    }
+  },
+  {
+    "name": "dataaug_4d_extra_v3_sigma025_lam1",
+    "method": "dataaug",
+    "dataset": "multi_handle_4d",
+    "seed": 721,
+    "override": {
+      "n_train": 2752,
+      "traj_count": 64,
+      "epochs": 1000,
+      "lr": 0.0003,
+      "sigmas": [0.25],
+      "lam_off": 1.0,
+      "train_log_every": 100,
+      "projector.steps": 120,
+      "projector.min_steps": 60
+    }
+  }
+]

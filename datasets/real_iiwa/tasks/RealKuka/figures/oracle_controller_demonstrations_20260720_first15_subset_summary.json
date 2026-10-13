@@ -1,0 +1,30 @@
+{
+  "subsets": [
+    {
+      "input": "datasets/real_iiwa/tasks/RealKuka/processed/train_sets/oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_v001.npz",
+      "output": "datasets/real_iiwa/tasks/RealKuka/processed/train_sets/oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_first15_v001.npz",
+      "source_trajectory_count": 56,
+      "selected_trajectory_count": 15,
+      "strategy": "first",
+      "selected_trajectory_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "source_points": 2971,
+      "output_points": 769
+    }
+  ]
+}

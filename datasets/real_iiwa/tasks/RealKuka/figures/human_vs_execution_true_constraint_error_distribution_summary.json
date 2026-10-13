@@ -1,0 +1,117 @@
+{
+  "human_npz": "/home/baiyu/PycharmProjects/LearnEqConstraints/datasets/real_iiwa/tasks/RealKuka/processed/train_sets/human_demo_paper_toolz_arc3mm_cropped_v001.npz",
+  "execution_root": "/home/baiyu/PycharmProjects/LearnEqConstraints/kuka_experiment_data/learned_from_human",
+  "execution_segment": "following_manifold",
+  "human_position_error_mm": {
+    "n": 1283,
+    "mean": 0.603721954482957,
+    "std": 0.4902816821859088,
+    "median": 0.5134912789799273,
+    "p95": 1.364199689123779,
+    "max": 4.7475663013756275
+  },
+  "human_orientation_error_deg": {
+    "n": 1283,
+    "mean": 4.576437550189666,
+    "std": 2.3958577396811327,
+    "median": 4.445685386657715,
+    "p95": 9.087058925628662,
+    "max": 12.959964752197266
+  },
+  "execution_position_error_mm": {
+    "n": 3100,
+    "mean": 1.0891035514465044,
+    "std": 0.7594521081181655,
+    "median": 0.9116209594390882,
+    "p95": 2.4869935408610364,
+    "max": 4.000133919353756
+  },
+  "execution_orientation_error_deg": {
+    "n": 3100,
+    "mean": 3.102255353433926,
+    "std": 1.0186678991671982,
+    "median": 3.046831917863785,
+    "p95": 4.720831054772247,
+    "max": 5.467660296659371
+  },
+  "execution_per_trajectory": [
+    {
+      "trajectory": "trajectory_001",
+      "samples": 210,
+      "position_error_mm_mean": 1.575034714903066,
+      "orientation_error_deg_mean": 3.141212235873507
+    },
+    {
+      "trajectory": "trajectory_002",
+      "samples": 180,
+      "position_error_mm_mean": 0.9651001703372344,
+      "orientation_error_deg_mean": 2.8751509232026717
+    },
+    {
+      "trajectory": "trajectory_003",
+      "samples": 179,
+      "position_error_mm_mean": 1.508079605856201,
+      "orientation_error_deg_mean": 3.0939528709964192
+    },
+    {
+      "trajectory": "trajectory_004",
+      "samples": 207,
+      "position_error_mm_mean": 0.4427511813900099,
+      "orientation_error_deg_mean": 2.9591625370062293
+    },
+    {
+      "trajectory": "trajectory_005",
+      "samples": 161,
+      "position_error_mm_mean": 1.27954801360601,
+      "orientation_error_deg_mean": 3.364041615973292
+    },
+    {
+      "trajectory": "trajectory_006",
+      "samples": 150,
+      "position_error_mm_mean": 1.7317647974738377,
+      "orientation_error_deg_mean": 3.7058382547827176
+    },
+    {
+      "trajectory": "trajectory_007",
+      "samples": 162,
+      "position_error_mm_mean": 1.0521673891566525,
+      "orientation_error_deg_mean": 2.8154033244778667
+    },
+    {
+      "trajectory": "trajectory_008",
+      "samples": 148,
+      "position_error_mm_mean": 1.1135628313983756,
+      "orientation_error_deg_mean": 2.999068415892227
+    },
+    {
+      "trajectory": "trajectory_009",
+      "samples": 128,
+      "position_error_mm_mean": 1.1987675328463367,
+      "orientation_error_deg_mean": 3.864718472804984
+    },
+    {
+      "trajectory": "trajectory_010",
+      "samples": 215,
+      "position_error_mm_mean": 0.6006250157723418,
+      "orientation_error_deg_mean": 2.7487167313480794
+    },
+    {
+      "trajectory": "trajectory_011",
+      "samples": 228,
+      "position_error_mm_mean": 1.1185432477448658,
+      "orientation_error_deg_mean": 3.141159959329103
+    },
+    {
+      "trajectory": "trajectory_012",
+      "samples": 198,
+      "position_error_mm_mean": 1.0405002710162392,
+      "orientation_error_deg_mean": 2.7022298545701293
+    },
+    {
+      "trajectory": "trajectory_013",
+      "samples": 934,
+      "position_error_mm_mean": 1.0337216724340637,
+      "orientation_error_deg_mean": 3.1468069643139596
+    }
+  ]
+}

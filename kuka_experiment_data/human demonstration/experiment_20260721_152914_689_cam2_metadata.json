@@ -1,0 +1,13 @@
+{
+  "camera_index": 1,
+  "video_file": "/home/ros/exp_logs/videos/experiment_20260721_152914_689_cam2.mp4",
+  "timestamp_file": "/home/ros/exp_logs/videos/experiment_20260721_152914_689_cam2_timestamps.csv",
+  "start_unix_time_ns": 1784647754689802924,
+  "start_local_time": "2026-07-21T15:29:14",
+  "plan_id_at_start": 1,
+  "device": "/dev/video0",
+  "width": 640,
+  "height": 480,
+  "fps": 30.0,
+  "codec": "ffmpeg-libx264-crf18-veryfast"
+}

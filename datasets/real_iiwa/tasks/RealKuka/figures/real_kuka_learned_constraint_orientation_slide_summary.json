@@ -1,0 +1,11 @@
+{
+  "checkpoint": "/home/baiyu/PycharmProjects/LearnEqConstraints/outputs/bench/oncl_RealKuka_human_demo_paper/runs/0001_oncl_RealKuka_seed0_39e63e4284/oncl/RealKuka/RealKuka_oncl_seed0_model.pt",
+  "demo_npz": "/home/baiyu/PycharmProjects/LearnEqConstraints/datasets/real_iiwa/tasks/RealKuka/processed/train_sets/human_demo_paper_toolz_arc3mm_cropped_v001.npz",
+  "n_learned_samples": 1764,
+  "n_orientation_arrows": 16,
+  "projection_steps_mean": 120.0,
+  "projection_steps_max": 120.0,
+  "note": "Orientation arrows show the upward learned normal for readability; tool local z-axis is the opposite direction.",
+  "png": "/home/baiyu/PycharmProjects/LearnEqConstraints/datasets/real_iiwa/tasks/RealKuka/figures/real_kuka_learned_constraint_orientation_slide.png",
+  "pdf": "/home/baiyu/PycharmProjects/LearnEqConstraints/datasets/real_iiwa/tasks/RealKuka/figures/real_kuka_learned_constraint_orientation_slide.pdf"
+}

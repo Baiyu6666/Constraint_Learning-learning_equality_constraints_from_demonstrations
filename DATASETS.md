@@ -68,6 +68,13 @@ The repository also includes several additional datasets that are not part of th
 | `3d_sphere_surface`              | 3        | 1     | base version                   | Sphere surface                                                                    |
 | `3d_sphere_surface_traj`         | 3        | 1     | traj version                   | Sphere surface with trajectory-style sampling                                     |
 | `3d_spiral`                      | 3        | 2     | no traj variant                | 3D helix/spiral curve manifold                                                    |
+| `3d_knot_spline_union`           | 3        | 2     | built-in trajectory gaps       | Union of a trefoil-knot curve and waypoint-spline closed curve, with training demonstrations leaving small gap segments |
+| `3d_double_torus_surface`        | 3        | 1     | base version                   | Connected genus-2 double-torus surface, defined as the outer boundary of two obliquely fused solid tori |
+| `3d_double_torus_surface_traj`   | 3        | 1     | traj version                   | Connected genus-2 oblique double-torus surface with trajectory-style sampling     |
+| `3d_faceted_sphere_surface`      | 3        | 1     | base version                   | Closed bumpy sphere-like surface generated from irregular 3D control points, with faceted ridges and dents |
+| `3d_faceted_sphere_surface_traj` | 3        | 1     | traj version                   | Trajectory-demonstration variant of the faceted control-point sphere surface       |
+| `3d_spiky_sphere_surface`        | 3        | 1     | base version                   | Hedgehog-like closed surface with many sharp radial spikes and deep dents for stress testing limitations |
+| `3d_spiky_sphere_surface_traj`   | 3        | 1     | traj version                   | Trajectory-demonstration variant of the spiky surface stress test                  |
 | `3d_torus_surface`               | 3        | 1     | base version                   | Torus surface without trajectory grouping                                         |
 | `3d_twosphere`                   | 3        | 1     | base version                   | Two-sphere manifold without trajectory grouping                                   |
 | `3d_vz_2d_discontinuous`         | 3        | 2     | derived lift, non-traj         | Lifted 2D discontinuous dataset with varying `z(x,y)`                             |

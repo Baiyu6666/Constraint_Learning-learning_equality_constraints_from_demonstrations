@@ -1,0 +1,14 @@
+{
+  "camera_index": 1,
+  "codec": "ffmpeg-libx264-crf18-veryfast",
+  "device": "/dev/video0",
+  "fps": 30.0,
+  "height": 480,
+  "plan_id_at_start": 53,
+  "start_local_time": "2026-07-21T16:54:15",
+  "start_unix_time_ns": 1784652855927857380,
+  "timestamp_file": "/home/ros/exp_logs/scan_experiments/learned_from_human/trajectory_004/manifold_cam2_timestamps.csv",
+  "video_file": "/home/ros/exp_logs/scan_experiments/learned_from_human/trajectory_004/manifold_cam2.mp4",
+  "width": 640,
+  "writer_opened_unix_time_ns": 1784652853058140981
+}

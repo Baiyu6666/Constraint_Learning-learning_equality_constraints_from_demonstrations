@@ -1,0 +1,104 @@
+{
+  "input": "/home/baiyu/iiwa_share/oracle_controller_demonstrations_20260720/oracle_demonstrations.npz",
+  "dataset": "RealKuka",
+  "output": "datasets/real_iiwa/tasks/RealKuka/processed/train_sets/oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_v001.npz",
+  "full_output": "datasets/real_iiwa/tasks/RealKuka/processed/train_sets/oracle_controller_demonstrations_20260720_actual_toolz_full_v001.npz",
+  "representation": "[surface-model normalized xyz, actual tool_z_x, actual tool_z_y, actual tool_z_z]",
+  "source_points": 15718,
+  "source_trajectories": 56,
+  "output_points": 2971,
+  "arc_length_threshold_mm": 3.0,
+  "kept_fraction": 0.1890189591551088,
+  "actual_position_bounds_m": {
+    "min": [
+      0.4445736125581626,
+      0.07168865351547848,
+      0.145413502204866
+    ],
+    "max": [
+      0.7199154834882779,
+      0.2875839000977039,
+      0.19609533115203706
+    ]
+  },
+  "arc_consecutive_xyz_step_mm": {
+    "mean": 3.448478628400175,
+    "median": 3.4606402791105433,
+    "p95": 3.9737957675020916,
+    "max": 5.3485914326105135
+  },
+  "all_position_abs_error_mm": {
+    "mean": 0.6958035526174255,
+    "median": 0.6246561242733151,
+    "p95": 1.587780885165557,
+    "max": 2.160304458811879
+  },
+  "all_position_signed_error_mm": {
+    "mean": 0.6161827511128184,
+    "median": 0.5984152958262712,
+    "p95": 1.587780885165557,
+    "max": 2.160304458811879
+  },
+  "all_orientation_error_deg": {
+    "mean": 0.2681099992043505,
+    "median": 0.24841300398111343,
+    "p95": 0.5121852308511734,
+    "max": 1.4380193948745728
+  },
+  "kept_position_abs_error_mm": {
+    "mean": 0.7025435417602709,
+    "median": 0.6420343997888267,
+    "p95": 1.5363337588496506,
+    "max": 2.1326986607164145
+  },
+  "kept_position_signed_error_mm": {
+    "mean": 0.6099515561192742,
+    "median": 0.6091415998525918,
+    "p95": 1.5363337588496506,
+    "max": 2.1326986607164145
+  },
+  "kept_orientation_error_deg": {
+    "mean": 0.2717810271493401,
+    "median": 0.2595560848712921,
+    "p95": 0.49669961631298065,
+    "max": 1.4230605363845825
+  },
+  "source_logged_error_stats": {
+    "source_true_constraint_signed_position_error_mm": {
+      "mean": 2.571854428504636,
+      "median": 2.559895553303039,
+      "p95": 3.542325955228442,
+      "max": 4.072278810591354
+    },
+    "source_true_constraint_abs_position_error_mm": {
+      "mean": 2.571854428504636,
+      "median": 2.559895553303039,
+      "p95": 3.542325955228442,
+      "max": 4.072278810591354
+    },
+    "source_true_constraint_orientation_error_deg": {
+      "mean": 0.2691221176630867,
+      "median": 0.24517844154103904,
+      "p95": 0.5275629261222781,
+      "max": 1.4997506233497213
+    },
+    "source_normal_tracking_error_mm": {
+      "mean": 2.5730075245980437,
+      "median": 2.561939996418607,
+      "p95": 3.54197674253698,
+      "max": 4.073028817034368
+    },
+    "source_orientation_tracking_error_deg": {
+      "mean": 0.27385062346707717,
+      "median": 0.2654283778888814,
+      "p95": 0.4992286393300306,
+      "max": 0.9075420269971917
+    }
+  },
+  "figures": {
+    "all_error_hist": "datasets/real_iiwa/tasks/RealKuka/figures/oracle_controller_demonstrations_20260720_error_hist.png",
+    "all_xy_error_map": "datasets/real_iiwa/tasks/RealKuka/figures/oracle_controller_demonstrations_20260720_xy_error_map.png",
+    "kept_error_hist": "datasets/real_iiwa/tasks/RealKuka/figures/oracle_controller_demonstrations_20260720_arc3mm_error_hist.png",
+    "kept_xy_error_map": "datasets/real_iiwa/tasks/RealKuka/figures/oracle_controller_demonstrations_20260720_arc3mm_xy_error_map.png"
+  }
+}

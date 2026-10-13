@@ -1,0 +1,74 @@
+{
+  "human_npz": "/home/baiyu/PycharmProjects/LearnEqConstraints/datasets/real_iiwa/tasks/RealKuka/processed/train_sets/human_demo_paper_toolz_arc3mm_cropped_v001.npz",
+  "execution_root": "/home/baiyu/PycharmProjects/LearnEqConstraints/kuka_experiment_data/learned_from_human",
+  "execution_segment": "following_manifold",
+  "definition": {
+    "human": "recorded human demonstration error relative to true constraint",
+    "learned": "learned constraint error relative to true constraint at execution-path samples",
+    "execution": "robot execution error relative to true constraint"
+  },
+  "position_error_mm": {
+    "human": {
+      "n": 1283,
+      "mean": 0.603721954482957,
+      "std": 0.4902816821859088,
+      "median": 0.5134912789799273,
+      "q25": 0.2656254800967872,
+      "q75": 0.8411417657043785,
+      "p95": 1.364199689123779,
+      "max": 4.7475663013756275
+    },
+    "learned": {
+      "n": 3100,
+      "mean": 0.6469680818593467,
+      "std": 0.4848335420689072,
+      "median": 0.5205700055369474,
+      "q25": 0.24771600456838883,
+      "q75": 0.9483240573595118,
+      "p95": 1.6373010829692702,
+      "max": 1.8720950810991719
+    },
+    "execution": {
+      "n": 3100,
+      "mean": 1.0891035514465044,
+      "std": 0.7594521081181655,
+      "median": 0.9116209594390882,
+      "q25": 0.5324683521875596,
+      "q75": 1.528085925709466,
+      "p95": 2.4869935408610364,
+      "max": 4.000133919353756
+    }
+  },
+  "orientation_error_deg": {
+    "human": {
+      "n": 1283,
+      "mean": 4.576437550189666,
+      "std": 2.3958577396811327,
+      "median": 4.445685386657715,
+      "q25": 2.6279261112213135,
+      "q75": 6.115718126296997,
+      "p95": 9.087058925628662,
+      "max": 12.959964752197266
+    },
+    "learned": {
+      "n": 3100,
+      "mean": 2.982517004295892,
+      "std": 0.9307677973295392,
+      "median": 2.926927162313811,
+      "q25": 2.3749454494568893,
+      "q75": 3.6621998700317206,
+      "p95": 4.664121790053423,
+      "max": 4.970597940252227
+    },
+    "execution": {
+      "n": 3100,
+      "mean": 3.102255353433926,
+      "std": 1.0186678991671982,
+      "median": 3.046831917863785,
+      "q25": 2.4646982018211148,
+      "q75": 3.865958198312788,
+      "p95": 4.720831054772247,
+      "max": 5.467660296659371
+    }
+  }
+}

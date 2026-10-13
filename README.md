@@ -122,6 +122,110 @@ python -m benchmark.plot_paper_benchmarks \
   --bench example_benchmark
 ```
 
+Grouped benchmark bar plots use a capped y-axis by default and label off-scale
+means on the bars; override with `--bar-ymax` when needed.
+
+## Remote Docker Runs
+
+The project includes a remote runner that keeps the local command shape close to
+the normal training commands. It syncs the repository to the server, starts a
+Docker container there, and forwards the remaining arguments to the existing
+entrypoints.
+
+Build the server Docker image once, or rebuild it after dependency changes:
+
+```bash
+python -m runners.remote \
+  --remote-host matterhorn \
+  --remote-build-image \
+  run-benchmark \
+  --methods oncl \
+  --datasets 3d_torus_surface_traj \
+  --seeds 0 \
+  --outdir /runs/smoke/oncl_torus
+```
+
+Run a single experiment remotely:
+
+```bash
+python -m runners.remote run-one \
+  --method oncl \
+  --dataset 3d_torus_surface_traj \
+  --seed 0 \
+  --outdir /runs/one/oncl_torus_seed0
+```
+
+Run a benchmark remotely:
+
+```bash
+python -m runners.remote run-benchmark \
+  --methods oncl,dataaug,vae,ecomann \
+  --datasets 3d_torus_surface_traj,3d_spatial_arm_ellip_n3_traj \
+  --seeds 0,1,2,3,4,5,6 \
+  --outdir /runs/bench/example_benchmark
+```
+
+Run a parallel sweep remotely. This is the recommended server path for sweeps:
+
+```bash
+python -m runners.remote run-parallel \
+  --methods oncl \
+  --datasets 3d_torus_surface_traj \
+  --seeds 0,1,2,3,4,5,6,7 \
+  --outdir /runs/parallel/oncl_torus
+```
+
+`run-parallel` defaults to `--workers 6` and automatically uses fewer workers
+when there are fewer than six jobs. Each job runs in its own subprocess and
+writes to its own output directory under `<outdir>/runs/<job>/`, so repeated
+seeds or parameter combinations do not overwrite each other.
+
+Parameter sweeps are also supported. Each `--sweep` adds a Cartesian sweep axis:
+
+```bash
+python -m runners.remote run-parallel \
+  --methods oncl \
+  --datasets 3d_sphere_surface \
+  --seeds 0,1,2 \
+  --sweep lr=0.001,0.002,0.003 \
+  --sweep batch_size=128,512 \
+  --outdir /runs/parallel/oncl_sphere_lr_batch
+```
+
+For fully custom sweeps, pass a JSONL job file where each line is one run:
+
+```json
+{"method":"oncl","dataset":"3d_sphere_surface","seed":0,"override":["lr=0.001"],"name":"oncl_lr1e-3_s0"}
+{"method":"ecomann","dataset":"3d_torus_surface_traj","seed":0,"override":{"epochs":800},"name":"ecomann_torus_s0"}
+```
+
+Then launch it with:
+
+```bash
+python -m runners.remote run-parallel \
+  --job-file configs/sweeps/my_jobs.jsonl \
+  --outdir /runs/parallel/my_jobs
+```
+
+Fetch remote results back to the local machine:
+
+```bash
+python -m runners.remote fetch \
+  /home/bpeng/runs/bench/example_benchmark \
+  outputs/remote_bench/example_benchmark
+```
+
+Defaults can be overridden with flags before the subcommand:
+
+- `--remote-host` defaults to `matterhorn`
+- `--remote-dir` defaults to `/home/bpeng/LearnEqConstraints`
+- `--remote-runs-dir` defaults to `/home/bpeng/runs`
+- `--remote-image` defaults to `learneq:cuda12.8`
+
+Use `/runs/...` for remote output directories when possible. The Docker runner
+mounts the server runs directory at `/runs`, keeping large artifacts outside the
+synced source tree.
+
 ### Important Training Arguments
 
 For `run_one` and `run_benchmark`, the most important arguments are:

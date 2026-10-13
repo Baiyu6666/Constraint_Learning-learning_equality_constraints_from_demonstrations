@@ -1,0 +1,47 @@
+[
+  {
+    "name": "ecomann_4d_extra_v1_lr1e-3_norm5",
+    "method": "ecomann",
+    "dataset": "multi_handle_4d",
+    "seed": 2116,
+    "override": {
+      "epochs": 60,
+      "lr": 0.001,
+      "n_normal_space_traversal": 5,
+      "n_local_neighborhood_mult": 1.0,
+      "train_log_every": 10,
+      "projector.max_iter": 250,
+      "projector.tol": 0.00005
+    }
+  },
+  {
+    "name": "ecomann_4d_extra_v2_lr3e-3_norm5",
+    "method": "ecomann",
+    "dataset": "multi_handle_4d",
+    "seed": 2116,
+    "override": {
+      "epochs": 60,
+      "lr": 0.003,
+      "n_normal_space_traversal": 5,
+      "n_local_neighborhood_mult": 1.0,
+      "train_log_every": 10,
+      "projector.max_iter": 250,
+      "projector.tol": 0.00005
+    }
+  },
+  {
+    "name": "ecomann_4d_extra_v3_lr1e-3_norm9",
+    "method": "ecomann",
+    "dataset": "multi_handle_4d",
+    "seed": 2116,
+    "override": {
+      "epochs": 60,
+      "lr": 0.001,
+      "n_normal_space_traversal": 9,
+      "n_local_neighborhood_mult": 1.0,
+      "train_log_every": 10,
+      "projector.max_iter": 250,
+      "projector.tol": 0.00005
+    }
+  }
+]

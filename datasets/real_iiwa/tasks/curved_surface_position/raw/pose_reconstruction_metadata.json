@@ -1,0 +1,9 @@
+{
+  "source_bag": "2026-07-18-17-21-43.bag",
+  "source_data": "/home/baiyu/iiwa_DS_docker/exp_logs/manual_surface_20260718_new/ball_center_raw.csv",
+  "old_link7_to_ball_center_m": 0.111,
+  "new_link7_to_ball_center_m": 0.1845,
+  "applied_delta_along_tool_z_m": 0.0735,
+  "samples": 13538,
+  "method": "p_new = p_old + (L_new - L_old) * tool_local_z_in_world"
+}

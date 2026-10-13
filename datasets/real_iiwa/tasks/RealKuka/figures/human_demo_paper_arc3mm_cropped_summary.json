@@ -1,0 +1,45 @@
+{
+  "source_npz": "/home/baiyu/iiwa_share/demonstration_test/passive_demo_20260721_152907_demonstration_test.csv",
+  "output_npz": "datasets/real_iiwa/tasks/RealKuka/processed/train_sets/human_demo_paper_toolz_arc3mm_cropped_v001.npz",
+  "crop_arc_start_index": 50,
+  "crop_arc_end_exclusive_index": 1333,
+  "removed_start_points": 50,
+  "removed_end_points": 76,
+  "source_points": 1409,
+  "cropped_points": 1283,
+  "position_abs_error_mm": {
+    "mean": 0.603721954482957,
+    "median": 0.5134912789799273,
+    "p95": 1.364199689123779,
+    "max": 4.7475663013756275
+  },
+  "position_signed_error_mm": {
+    "mean": 0.09313706326109243,
+    "median": -0.00010430541408368299,
+    "p95": 1.238933694548903,
+    "max": 4.7475663013756275
+  },
+  "orientation_error_deg": {
+    "mean": 4.576437550189666,
+    "median": 4.445685386657715,
+    "p95": 9.087058925628662,
+    "max": 12.959964752197266
+  },
+  "position_bounds_m": {
+    "min": [
+      0.40522319078445435,
+      0.06803610175848007,
+      0.1441800594329834
+    ],
+    "max": [
+      0.739963948726654,
+      0.29149457812309265,
+      0.20080366730690002
+    ]
+  },
+  "figures": {
+    "error_hist": "datasets/real_iiwa/tasks/RealKuka/figures/human_demo_paper_arc3mm_cropped_error_hist.png",
+    "xy_trajectory": "datasets/real_iiwa/tasks/RealKuka/figures/human_demo_paper_arc3mm_cropped_xy_trajectory.png",
+    "xy_error_map": "datasets/real_iiwa/tasks/RealKuka/figures/human_demo_paper_arc3mm_cropped_xy_error_map.png"
+  }
+}

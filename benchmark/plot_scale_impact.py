@@ -282,21 +282,21 @@ def _plot_paper_single_panel_line(
 ) -> None:
     target_datasets = [
         "3d_torus_surface_traj",
-        "6d_workspace_sine_surface_pose_traj",
+        "6d_surf_normal_traj",
     ]
     target_methods = ["oncl", "ecomann"]
     if len(scales) == 0:
         return
 
     # Single-column friendly figure with dual y-axis:
-    # left axis for Torus, right axis for SinePose.
+    # left axis for Torus, right axis for 6DSurfNormal.
     fig, ax = plt.subplots(figsize=(5, 1.8))
     ax_r = ax.twinx()
 
     # Dataset by color; method by linestyle.
     dataset_style = {
         "3d_torus_surface_traj": ("3DTorus", "#1f77b4"),
-        "6d_workspace_sine_surface_pose_traj": ("6DSinePose", "#d62728"),
+        "6d_surf_normal_traj": ("6DSurfNormal", "#d62728"),
     }
     method_style = {"oncl": ("ONCL (Ours)", "-"), "ecomann": ("ECoMaNN", "--")}
 
@@ -365,17 +365,19 @@ def _plot_paper_single_panel_line(
     ax.set_xticklabels(xlabels)
     ax.tick_params(axis="x", labelsize=8)
     ax.tick_params(axis="y", labelsize=8, colors=dataset_style["3d_torus_surface_traj"][1])
-    ax_r.tick_params(axis="y", labelsize=8, colors=dataset_style["6d_workspace_sine_surface_pose_traj"][1])
+    ax_r.tick_params(axis="y", labelsize=8, colors=dataset_style["6d_surf_normal_traj"][1])
     ax.set_xlabel("Number of training data", fontsize=8)
     ax.set_ylabel(
-        f"3DTorus {_metric_label(metric)} ",
+        f"3DTorus\n{_metric_label(metric)} ",
         fontsize=8,
+        labelpad=4,
         color=dataset_style["3d_torus_surface_traj"][1],
     )
     ax_r.set_ylabel(
-        f"6DSinePose {_metric_label(metric)}",
+        f"6DSurfNormal\n{_metric_label(metric)}",
         fontsize=8,
-        color=dataset_style["6d_workspace_sine_surface_pose_traj"][1],
+        labelpad=8,
+        color=dataset_style["6d_surf_normal_traj"][1],
     )
     ax.grid(axis="y", alpha=0.22, zorder=0)
     ax.set_axisbelow(True)
@@ -384,7 +386,7 @@ def _plot_paper_single_panel_line(
         frameon=False,
         ncol=1,
         loc="center left",
-        bbox_to_anchor=(1.2, 0.5),
+        bbox_to_anchor=(1.33, 0.5),
         fontsize=6.7,
         handlelength=3.0,
         handletextpad=0.45,
@@ -392,12 +394,12 @@ def _plot_paper_single_panel_line(
         labelspacing=0.8,
     )
     # Keep extra margins for dual y-labels and reserve the right side for legend.
-    fig.subplots_adjust(left=0.1, right=0.55, bottom=0.25, top=0.91)
+    fig.subplots_adjust(left=0.17, right=0.52, bottom=0.25, top=0.91)
 
     os.makedirs(outdir, exist_ok=True)
     metric_stem = _metric_file_stem(metric)
-    out_png = os.path.join(outdir, f"{metric_stem}_torus_sinepose_single_panel_line.png")
-    out_pdf = os.path.join(outdir, f"{metric_stem}_torus_sinepose_single_panel_line.pdf")
+    out_png = os.path.join(outdir, f"{metric_stem}_torus_surfnormal_single_panel_line.png")
+    out_pdf = os.path.join(outdir, f"{metric_stem}_torus_surfnormal_single_panel_line.pdf")
     fig.savefig(out_png, dpi=300)
     fig.savefig(out_pdf, dpi=300)
     plt.close(fig)

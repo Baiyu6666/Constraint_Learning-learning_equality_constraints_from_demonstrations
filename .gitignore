@@ -31,6 +31,7 @@ Thumbs.db
 *.log
 
 # Experiment outputs and local tracking
+outputs/
 wandb/
 
 # Generated datasets and cached assets
@@ -38,6 +39,7 @@ datasets/generated/
 
 # Media generated during analysis/debugging
 *.gif
+*.mp4
 
 # Vendored third-party data artifacts
 smp_manifold_learning-master/**/*.npy

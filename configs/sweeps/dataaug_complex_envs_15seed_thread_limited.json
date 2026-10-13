@@ -1,0 +1,28 @@
+{
+  "name": "dataaug_complex_envs_15seed_thread_limited",
+  "description": "DataAug 15-seed benchmark for the CPU-heavy environments. These runs should limit each worker's internal BLAS/OMP thread count when using multi-process parallelism, otherwise KNN/PCA-based off-manifold data augmentation can oversubscribe CPU cores and make wall time unstable.",
+  "method": "dataaug",
+  "datasets": [
+    "6d_spatial_arm_up_n6_py_traj",
+    "6d_surf_normal_traj",
+    "12d_dual_arm_traj"
+  ],
+  "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+  "primary_metric": "proj_manifold_dist",
+  "thread_limit_policy": {
+    "apply_when": "DataAug is run with workers > 1 on these CPU-heavy environments.",
+    "reason": "DataAug performs CPU-heavy KNN/PCA normal estimation and off-manifold sample filtering. With workers=6, unrestricted BLAS/OMP threads can oversubscribe CPU cores.",
+    "env": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "affects": "Runtime scheduling only; does not change data, seeds, model hyperparameters, training objective, or evaluation protocol."
+  },
+  "planned_jobs": 45,
+  "remote_outdir": "/runs/bench/dataaug_complex_envs_15seed_thread_limited",
+  "run_parallel_template": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 python -m runners.run_parallel --methods dataaug --datasets 6d_spatial_arm_up_n6_py_traj,6d_surf_normal_traj,12d_dual_arm_traj --seeds 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14 --outdir /runs/bench/dataaug_complex_envs_15seed_thread_limited --workers 6 --resume",
+  "remote_run_parallel_template": "python -m runners.remote --remote-extra-env OMP_NUM_THREADS=1 --remote-extra-env OPENBLAS_NUM_THREADS=1 --remote-extra-env MKL_NUM_THREADS=1 --remote-extra-env NUMEXPR_NUM_THREADS=1 --remote-extra-env VECLIB_MAXIMUM_THREADS=1 run-parallel --methods dataaug --datasets 6d_spatial_arm_up_n6_py_traj,6d_surf_normal_traj,12d_dual_arm_traj --seeds 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14 --outdir /runs/bench/dataaug_complex_envs_15seed_thread_limited --workers 6 --resume"
+}

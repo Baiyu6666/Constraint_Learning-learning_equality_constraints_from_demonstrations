@@ -1,0 +1,100 @@
+{
+  "task_id": "RealKuka",
+  "robot": "kuka_iiwa14",
+  "surface_type": "neural_height_field",
+  "registered_dataset": "RealKuka",
+  "constraints": {
+    "position": {
+      "type": "neural_height_field",
+      "frame": "world",
+      "model": "../../surface_models/calibrated_tcp1845_neural_1d_surface_model/calibrated_tcp1845_neural_1d_surface_mlp.pt",
+      "metadata": "../../surface_models/calibrated_tcp1845_neural_1d_surface_model/calibrated_tcp1845_neural_1d_surface.json",
+      "implicit": "z - f_neural(x, y) = 0",
+      "source": "calibrated_tcp1845_neural_1d_surface_model"
+    },
+    "orientation": {
+      "type": "tool_z_axis",
+      "target": "-neural_surface_upward_normal",
+      "source": "Training uses recorded/reconstructed human demonstration tool local z-axis."
+    }
+  },
+  "notes": "Default training set is human_demo_paper, greedily thinned by 3 mm xyz arc length and cropped to remove enter/leave segments. Input x is [surface-model normalized xyz, recorded tool_z_x, tool_z_y, tool_z_z]. Additional RealKuka demonstrations can be added as separate train_sets under this task.",
+  "source": {
+    "external_directory": "/home/baiyu/iiwa_share/demonstration_test",
+    "oracle_controller_directory": "/home/baiyu/iiwa_share/oracle_controller_demonstrations_20260720",
+    "raw_csv": "passive_demo_20260721_152907_demonstration_test.csv",
+    "metadata_json": "passive_demo_20260721_152907_demonstration_test.json",
+    "default_demonstration": "human_demo_paper",
+    "default_processed_train_npz": "processed/train_sets/human_demo_paper_toolz_arc3mm_cropped_v001.npz",
+    "default_processing_script": "tools/build_iiwa_passive_demo_toolz_dataset.py --arc-mm 3 followed by start/end crop",
+    "oracle_controller_processing_script": "tools/build_iiwa_oracle_demo_toolz_dataset.py --arc-mm 3",
+    "crop_arc_start_index": 50,
+    "crop_arc_end_exclusive_index": 1333
+  },
+  "train_sets": [
+    {
+      "name": "human_demo_paper_toolz_arc3mm_cropped_v001",
+      "demonstration": "human_demo_paper",
+      "path": "processed/train_sets/human_demo_paper_toolz_arc3mm_cropped_v001.npz",
+      "x_space": "surface_model_normalized_uvz_plus_tool_z",
+      "subsample_mode": "passive_demo_greedy_xyz_arc_length_3mm_then_remove_enter_leave_segments",
+      "point_count": 1283
+    },
+    {
+      "name": "oracle_controller_demonstrations_20260720_actual_toolz_full_v001",
+      "path": "processed/train_sets/oracle_controller_demonstrations_20260720_actual_toolz_full_v001.npz",
+      "x_space": "surface_model_normalized_uvz_plus_tool_z",
+      "subsample_mode": "oracle_controller_actual_execution_no_thinning",
+      "point_count": 15718
+    },
+    {
+      "name": "oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_v001",
+      "path": "processed/train_sets/oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_v001.npz",
+      "x_space": "surface_model_normalized_uvz_plus_tool_z",
+      "subsample_mode": "oracle_controller_actual_execution_then_greedy_xyz_arc_length_3mm_per_trajectory",
+      "point_count": 2971
+    },
+    {
+      "name": "oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_traj4_v001",
+      "path": "processed/train_sets/oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_traj4_v001.npz",
+      "x_space": "surface_model_normalized_uvz_plus_tool_z",
+      "subsample_mode": "oracle_controller_evenly_spaced_4_trajectories_from_arc3mm",
+      "point_count": 174
+    },
+    {
+      "name": "oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_traj8_v001",
+      "path": "processed/train_sets/oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_traj8_v001.npz",
+      "x_space": "surface_model_normalized_uvz_plus_tool_z",
+      "subsample_mode": "oracle_controller_evenly_spaced_8_trajectories_from_arc3mm",
+      "point_count": 339
+    },
+    {
+      "name": "oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_traj16_v001",
+      "path": "processed/train_sets/oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_traj16_v001.npz",
+      "x_space": "surface_model_normalized_uvz_plus_tool_z",
+      "subsample_mode": "oracle_controller_evenly_spaced_16_trajectories_from_arc3mm",
+      "point_count": 801
+    },
+    {
+      "name": "oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_first15_v001",
+      "path": "processed/train_sets/oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_first15_v001.npz",
+      "x_space": "surface_model_normalized_uvz_plus_tool_z",
+      "subsample_mode": "oracle_controller_first_15_trajectories_from_arc3mm",
+      "point_count": 769
+    },
+    {
+      "name": "oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_random20_seed20260721_v001",
+      "path": "processed/train_sets/oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_random20_seed20260721_v001.npz",
+      "x_space": "surface_model_normalized_uvz_plus_tool_z",
+      "subsample_mode": "oracle_controller_explicit_20_trajectories_seed20260721_from_arc3mm",
+      "point_count": 1002
+    },
+    {
+      "name": "oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_traj28_v001",
+      "path": "processed/train_sets/oracle_controller_demonstrations_20260720_actual_toolz_arc3mm_traj28_v001.npz",
+      "x_space": "surface_model_normalized_uvz_plus_tool_z",
+      "subsample_mode": "oracle_controller_evenly_spaced_28_trajectories_from_arc3mm",
+      "point_count": 1458
+    }
+  ]
+}

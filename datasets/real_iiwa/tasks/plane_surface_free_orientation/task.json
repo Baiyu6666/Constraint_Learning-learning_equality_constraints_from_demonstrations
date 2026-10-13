@@ -1,0 +1,52 @@
+{
+  "task_id": "plane_surface_free_orientation",
+  "robot": "kuka_iiwa14",
+  "surface_type": "plane",
+  "orientation_condition": "free",
+  "registered_dataset": "real_iiwa_plane_surface_free_orientation",
+  "constraints": {
+    "position": {
+      "type": "plane",
+      "frame": "world",
+      "normal": [
+        0.0027779415162709365,
+        0.0074624800006471495,
+        0.9999682967140369
+      ],
+      "d": -0.16089767061815902,
+      "implicit": "normal[0]*x + normal[1]*y + normal[2]*z + d = 0",
+      "source": "Shared plane estimate from fixed-orientation manual-crop tcp_pos using the 111mm ball-center TCP geometry."
+    },
+    "orientation": {
+      "type": "free",
+      "source": "No true orientation constraint is imposed for this dataset."
+    }
+  },
+  "tcp_offset_ee_m": [
+    0.0,
+    0.0,
+    0.111
+  ],
+  "notes": "Plane-surface demonstration with freely varying orientation.",
+  "trajectories": [
+    {
+      "traj_id": "demo_000",
+      "kind": "demo",
+      "source_bag": "raw_bags/demo_000__2026-07-16-07-27-28.bag",
+      "extracted_npz": "extracted/demo_000/iiwa_demonstration.npz",
+      "extraction_metadata": "extracted/demo_000/metadata.json",
+      "manual_crop": "processed/crops/demo_000_manual_crop.npz"
+    }
+  ],
+  "train_sets": [
+    {
+      "name": "tcp_pos_8mm_manual_crop_v001",
+      "path": "processed/train_sets/tcp_pos_8mm_manual_crop_v001.npz",
+      "x_space": "tcp_pos",
+      "subsample_mode": "arclength",
+      "target_spacing_m": 0.008,
+      "point_count": 272,
+      "figure": "figures/tcp_pos_8mm_manual_crop_v001_density.png"
+    }
+  ]
+}

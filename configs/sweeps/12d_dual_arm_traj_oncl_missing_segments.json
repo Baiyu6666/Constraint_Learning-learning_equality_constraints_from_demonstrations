@@ -1,0 +1,26 @@
+{
+  "name": "12d_dual_arm_traj_oncl_missing_segments",
+  "description": "ONCL robustness sweep for 12d_dual_arm_traj with fragmented trajectory demonstrations. For each training trajectory, remove train_missing_segment_count randomly located continuous segments. train_missing_total_ratio is the total removed fraction of each trajectory, split approximately evenly across segments.",
+  "method": "oncl",
+  "dataset": "12d_dual_arm_traj",
+  "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+  "missing_segments": {
+    "enabled_key": "train_missing_segment_enable",
+    "mode_key": "train_missing_segment_mode",
+    "total_ratio_key": "train_missing_total_ratio",
+    "count_key": "train_missing_segment_count",
+    "keep_n_train_key": "train_missing_keep_n_train",
+    "mode": "trajectory_random_segments",
+    "total_ratios": [0.0, 0.1, 0.25, 0.5],
+    "count": 3,
+    "keep_n_train": true,
+    "formula": "For each trajectory of length T, remove approximately total_ratio * T points split across count continuous random segments.",
+    "start_policy": "segment starts are sampled uniformly over valid trajectory indices, avoiding overlap when possible",
+    "zero_ratio_policy": "ratio 0.0 leaves demonstrations unchanged"
+  },
+  "primary_metric": "proj_manifold_dist",
+  "eval_policy": "Evaluation remains clean; missing segments are applied only to training demonstrations.",
+  "planned_jobs": 60,
+  "remote_outdir": "/runs/bench/12d_dual_arm_traj_oncl_missing_segments_15seed",
+  "run_parallel_template": "python -m runners.run_parallel --methods oncl --datasets 12d_dual_arm_traj --seeds 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14 --sweep train_missing_total_ratio=0.0,0.1,0.25,0.5 --override train_missing_segment_enable=true --override train_missing_segment_mode=trajectory_random_segments --override train_missing_segment_count=3 --override train_missing_keep_n_train=true --outdir /runs/bench/12d_dual_arm_traj_oncl_missing_segments_15seed --workers 6 --resume"
+}

@@ -1,0 +1,470 @@
+[
+  {
+    "name": "lr1e-3_ep3500_lam0p2_ortho1_seed8",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 8,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.2,
+      "lam_oncl_ortho": 1.0,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p2_ortho1_seed9",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 9,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.2,
+      "lam_oncl_ortho": 1.0,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p2_ortho1_seed11",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 11,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.2,
+      "lam_oncl_ortho": 1.0,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p2_ortho1_seed5",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 5,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.2,
+      "lam_oncl_ortho": 1.0,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p2_ortho1_seed14",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 14,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.2,
+      "lam_oncl_ortho": 1.0,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p2_ortho1_seed13",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 13,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.2,
+      "lam_oncl_ortho": 1.0,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep4000_lam0p2_ortho1_seed8",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 8,
+    "override": {
+      "lr": 0.001,
+      "epochs": 4000,
+      "lam_oncl": 0.2,
+      "lam_oncl_ortho": 1.0,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep4000_lam0p2_ortho1_seed9",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 9,
+    "override": {
+      "lr": 0.001,
+      "epochs": 4000,
+      "lam_oncl": 0.2,
+      "lam_oncl_ortho": 1.0,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep4000_lam0p2_ortho1_seed11",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 11,
+    "override": {
+      "lr": 0.001,
+      "epochs": 4000,
+      "lam_oncl": 0.2,
+      "lam_oncl_ortho": 1.0,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep4000_lam0p2_ortho1_seed5",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 5,
+    "override": {
+      "lr": 0.001,
+      "epochs": 4000,
+      "lam_oncl": 0.2,
+      "lam_oncl_ortho": 1.0,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep4000_lam0p2_ortho1_seed14",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 14,
+    "override": {
+      "lr": 0.001,
+      "epochs": 4000,
+      "lam_oncl": 0.2,
+      "lam_oncl_ortho": 1.0,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep4000_lam0p2_ortho1_seed13",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 13,
+    "override": {
+      "lr": 0.001,
+      "epochs": 4000,
+      "lam_oncl": 0.2,
+      "lam_oncl_ortho": 1.0,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p2_ortho1p5_seed8",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 8,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.2,
+      "lam_oncl_ortho": 1.5,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p2_ortho1p5_seed9",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 9,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.2,
+      "lam_oncl_ortho": 1.5,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p2_ortho1p5_seed11",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 11,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.2,
+      "lam_oncl_ortho": 1.5,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p2_ortho1p5_seed5",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 5,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.2,
+      "lam_oncl_ortho": 1.5,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p2_ortho1p5_seed14",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 14,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.2,
+      "lam_oncl_ortho": 1.5,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p2_ortho1p5_seed13",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 13,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.2,
+      "lam_oncl_ortho": 1.5,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p2_ortho2_seed8",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 8,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.2,
+      "lam_oncl_ortho": 2.0,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p2_ortho2_seed9",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 9,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.2,
+      "lam_oncl_ortho": 2.0,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p2_ortho2_seed11",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 11,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.2,
+      "lam_oncl_ortho": 2.0,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p2_ortho2_seed5",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 5,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.2,
+      "lam_oncl_ortho": 2.0,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p2_ortho2_seed14",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 14,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.2,
+      "lam_oncl_ortho": 2.0,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p2_ortho2_seed13",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 13,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.2,
+      "lam_oncl_ortho": 2.0,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p15_ortho1p5_seed8",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 8,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.15,
+      "lam_oncl_ortho": 1.5,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p15_ortho1p5_seed9",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 9,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.15,
+      "lam_oncl_ortho": 1.5,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p15_ortho1p5_seed11",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 11,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.15,
+      "lam_oncl_ortho": 1.5,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p15_ortho1p5_seed5",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 5,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.15,
+      "lam_oncl_ortho": 1.5,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p15_ortho1p5_seed14",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 14,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.15,
+      "lam_oncl_ortho": 1.5,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p15_ortho1p5_seed13",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 13,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.15,
+      "lam_oncl_ortho": 1.5,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p25_ortho1p5_seed8",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 8,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.25,
+      "lam_oncl_ortho": 1.5,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p25_ortho1p5_seed9",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 9,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.25,
+      "lam_oncl_ortho": 1.5,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p25_ortho1p5_seed11",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 11,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.25,
+      "lam_oncl_ortho": 1.5,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p25_ortho1p5_seed5",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 5,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.25,
+      "lam_oncl_ortho": 1.5,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p25_ortho1p5_seed14",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 14,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.25,
+      "lam_oncl_ortho": 1.5,
+      "train_log_every": 500
+    }
+  },
+  {
+    "name": "lr1e-3_ep3500_lam0p25_ortho1p5_seed13",
+    "method": "oncl",
+    "dataset": "12d_dual_arm_traj",
+    "seed": 13,
+    "override": {
+      "lr": 0.001,
+      "epochs": 3500,
+      "lam_oncl": 0.25,
+      "lam_oncl_ortho": 1.5,
+      "train_log_every": 500
+    }
+  }
+]

@@ -1,0 +1,89 @@
+{
+  "task_id": "curved_surface_position",
+  "robot": "kuka_iiwa14",
+  "surface_type": "neural_height_field",
+  "registered_dataset": "real_iiwa_curved_surface_position",
+  "constraints": {
+    "position": {
+      "type": "neural_height_field",
+      "frame": "world",
+      "model": "../../surface_models/calibrated_tcp1845_neural_1d_surface_model/calibrated_tcp1845_neural_1d_surface_mlp.pt",
+      "metadata": "../../surface_models/calibrated_tcp1845_neural_1d_surface_model/calibrated_tcp1845_neural_1d_surface.json",
+      "implicit": "z - f_neural(x, y) = 0",
+      "source": "calibrated_tcp1845_neural_1d_surface_model"
+    },
+    "orientation": {
+      "type": "tool_z_axis",
+      "target": "-neural_surface_upward_normal",
+      "source": "Pose variants of this task use the recorded tool local z-axis as orientation input."
+    }
+  },
+  "tcp_offset_link7_m": [
+    0.0,
+    0.0,
+    0.1845
+  ],
+  "tcp_offset_ee_m": [
+    0.0,
+    0.0,
+    0.1395
+  ],
+  "notes": "Curved-surface true-manifold samples reconstructed at the calibrated TCP184.5 ball-center geometry.",
+  "source": {
+    "external_directory": "/home/baiyu/iiwa_share/true_surface_pose_tcp1845_20260719",
+    "pose_samples_csv": "raw/true_surface_pose_samples.csv",
+    "fit_points_csv": "raw/true_surface_fit_points.csv",
+    "pose_reconstruction_metadata": "raw/pose_reconstruction_metadata.json"
+  },
+  "train_sets": [
+    {
+      "name": "tcp1845_fit_points_v001",
+      "path": "processed/train_sets/tcp1845_fit_points_v001.npz",
+      "x_space": "tcp1845_ball_center_position",
+      "subsample_mode": "aggregated_fit_points",
+      "point_count": 843
+    },
+    {
+      "name": "tcp1845_fit_points_normalized_v001",
+      "path": "processed/train_sets/tcp1845_fit_points_normalized_v001.npz",
+      "x_space": "surface_model_normalized_uvz",
+      "subsample_mode": "aggregated_fit_points_coordinate_normalized_no_denoise",
+      "point_count": 843
+    },
+    {
+      "name": "tcp1845_pose_samples_v001",
+      "path": "processed/train_sets/tcp1845_pose_samples_v001.npz",
+      "x_space": "tcp1845_ball_center_position",
+      "subsample_mode": "dense_pose_samples",
+      "point_count": 13538
+    },
+    {
+      "name": "tcp1845_pose_toolz_samples_v001",
+      "path": "processed/train_sets/tcp1845_pose_toolz_samples_v001.npz",
+      "x_space": "tcp1845_ball_center_pose_tool_z",
+      "subsample_mode": "dense_pose_samples_with_recorded_tool_z_axis",
+      "point_count": 13538
+    },
+    {
+      "name": "tcp1845_pose_toolz_samples_normalized_v001",
+      "path": "processed/train_sets/tcp1845_pose_toolz_samples_normalized_v001.npz",
+      "x_space": "surface_model_normalized_uvz_plus_tool_z",
+      "subsample_mode": "dense_pose_samples_coordinate_normalized_with_recorded_tool_z_axis",
+      "point_count": 13538
+    },
+    {
+      "name": "tcp1845_uniform_surface_1200_v001",
+      "path": "processed/train_sets/tcp1845_uniform_surface_1200_v001.npz",
+      "x_space": "tcp1845_ball_center_position",
+      "subsample_mode": "uniform_xy_in_support_polygon",
+      "point_count": 1200
+    },
+    {
+      "name": "tcp1845_uniform_surface_1200_normalized_v001",
+      "path": "processed/train_sets/tcp1845_uniform_surface_1200_normalized_v001.npz",
+      "x_space": "surface_model_normalized_uvz",
+      "subsample_mode": "uniform_xy_in_support_polygon_then_surface_model_normalized",
+      "point_count": 1200
+    }
+  ]
+}

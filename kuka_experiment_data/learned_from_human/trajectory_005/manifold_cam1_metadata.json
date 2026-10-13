@@ -1,0 +1,14 @@
+{
+  "camera_index": 0,
+  "codec": "ffmpeg-libx264-crf18-veryfast",
+  "device": "scrcpy://android-camera",
+  "fps": 30.0,
+  "height": 1080,
+  "plan_id_at_start": 54,
+  "start_local_time": "2026-07-21T16:54:36",
+  "start_unix_time_ns": 1784652876512642948,
+  "timestamp_file": "/home/ros/exp_logs/scan_experiments/learned_from_human/trajectory_005/manifold_cam1_timestamps.csv",
+  "video_file": "/home/ros/exp_logs/scan_experiments/learned_from_human/trajectory_005/manifold_cam1.mp4",
+  "width": 1920,
+  "writer_opened_unix_time_ns": 1784652873995211604
+}
